@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <script src="./js/scripts.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Todo List</h1>
+        </header>
+    
+        <section id="todo-options">
+            <div class="todo-add">
+                <form action="" onsubmit="Form.submit(event, 'new')">
+                    <input id="todo-new" type="text" placeholder="Enter new todo" name="todo" autocomplete="off" required>
+                    
+                    <button type="submit" class="btn-icon"><img src="./assets/plus.svg" alt="Add todo"></button>
+                </form>
+            
+            </div>
+    
+            <div class="todo-filter">
+                <select name="category" id="todo-category" onchange="Form.submit(event, 'filter')">
+                    <option value="all">all</option>
+                    <option value="completed">Completed</option>
+                    <option value="notcompleted">Not completed</option>
+                </select>
+            </div>
+        </section>
+    
+        <main>
+            <ul id="todos"><!-- 
+                <li class="todo">
+                    <div class="todo-description">
+                        <p>HTML</p>
+                    </div>
+    
+                    <div class="todo-btns">
+                        <button class="btn-icon btn-complete"><img src="./assets/check.svg" alt="Check todo"></button>
+                        <button class="btn-icon btn-remove"><img src="./assets/trash.svg" alt="Remove todo"></button>
+                    </div>
+                </li> -->
+            </ul>
+        </main>
+    </div>
+</body>
+</html>
